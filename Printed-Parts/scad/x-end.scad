@@ -25,14 +25,13 @@ module x_end_base(){
 
 module x_end_holes(){
 	vertical_bearing_holes();
+
 	// Belt hole
 	translate(v=[-1,0,0]){
 		// Stress relief
 		translate(v=[-5.5-10+1.5,-10-1,30]) cube(size = [18,1,28], center = true);
 		difference(){
 			translate(v=[-5.5-10+1.5,-10,30]) cube(size = [10,46,28], center = true);
-
-
 
 			// Nice edges
 			translate(v=[-5.5-10+1.5-5,-10,30+23]) rotate([0,20,0]) cube(size = [10,46,28], center = true);
@@ -50,16 +49,16 @@ module x_end_holes(){
 
 	// TR Nut trap
 	// Hole for the nut
-	translate(v=[0,-17, -1]) poly_cylinder(h = 9.01, r = 6.6, $fn = 25);
+	translate(v=[0,-17, -1]) poly_cylinder(h = 9.01, r = 5.1, $fn = 25);
 
 	// Screw holes for TR nut
-	translate(v=[0,-17, 0]) rotate([0, 0, -135]) translate([0, 9.5, -1]) cylinder(h = 10, r = 1.55, $fn=25);
-	translate(v=[0,-17, 0]) rotate([0, 0, -135]) translate([0, -9.5, -1]) cylinder(h = 10, r = 1.55, $fn=25);
+	translate(v=[0,-17, 0]) rotate([0, 0, -135]) translate([0, 8, -1]) cylinder(h = 10, r = 1.55, $fn=25);
+	translate(v=[0,-17, 0]) rotate([0, 0, -135]) translate([0, -8, -1]) cylinder(h = 10, r = 1.55, $fn=25);
 
 	// Nut traps for TR nut screws
-	translate(v=[0,-17, 0]) rotate([0, 0, -135]) translate([0, 9.5, 6]) rotate([0, 0, 0])cylinder(h = 3, r = 3.3, $fn=6);
+	translate(v=[0,-17, 0]) rotate([0, 0, -135]) translate([0, 8, 6]) rotate([0, 0, 0])cylinder(h = 3, r = 3.3, $fn=6);
 
-	translate(v=[0,-17, 0]) rotate([0, 0, -135]) translate([0, -9.5, 6]) rotate([0, 0, 30])cylinder(h = 3, r = 3.2, $fn=6);
+	translate(v=[0,-17, 0]) rotate([0, 0, -135]) translate([0, -8, 6]) rotate([0, 0, 30])cylinder(h = 3, r = 3.2, $fn=6);
 	translate([-5.5,-17.2,6]) rotate([0,0,30]) cube([5,5,3]);
 	translate([-0,-17.2,6]) rotate([0,0,60]) cube([5,10,3]);
 }
