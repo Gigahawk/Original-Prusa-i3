@@ -33,6 +33,7 @@ difference() {
     // pcb cout out
     translate( [ 4 , 1.5 , -1 ] ) cube( [ 1.8 , 56.5 , 17 ] ); 
     translate( [ 0 , 7.5 , -1 ] ) cube( [ 5.8 , 44.5 , 17 ] ); 
+    translate( [ -5.999, 40, -1 ] ) cube ( [ 6, 10, 17 ] );
     translate( [ 4.8 , 3.5 , -1 ] ) cube( [ 5.8 , 52.5 , 17 ] );
 
     translate( [ 8 , -5 , -1 ] ) rotate([0,0,45]) cube( [ 5 , 5 , 17 ] );
@@ -90,7 +91,7 @@ difference() {
 rotate([0,0,45]) body();
 
 // lightening holes
-translate( [ -42 , 15 , -1 ] ) cylinder( h = 15, r = 14, $fn=6);  
+translate( [ -44 , 15 , -1 ] ) cylinder( h = 15, r = 13.5, $fn=6);  
 translate( [ -24 , 7 , -1 ] ) cylinder( h = 15, r = 5, $fn=6);  
 translate( [ -60 , 7 , -1 ] ) cylinder( h = 15, r = 5, $fn=6);  
 translate( [ -60 , 23 , -1 ] ) cylinder( h = 15, r = 5, $fn=6);  
