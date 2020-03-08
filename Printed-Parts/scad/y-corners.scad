@@ -6,7 +6,7 @@
 // http://prusamendel.org
 
 
-module corner_base(){	
+module corner_base(){
  translate([-9,-11,0])cube([18,22,49]);
 }
 
@@ -24,18 +24,16 @@ module corner_holes(){
 
   // Top smooth rod insert
   // Smooth rod place
-  translate([11,2.75,47]) rotate([0,90,90]) cylinder(h = 9.75, r=4.2, $fn=30); 
+  translate([11,2.75,47]) rotate([0,90,90]) cylinder(h = 9.8, r=4.2, $fn=30);
   // Ziptie
   translate([-5,6,41])  cube([30,3.5,2]);
-  
+
   // LM8UU keepout
   difference(){
-    translate([11,12.5,46]) rotate([0,90,90]) cylinder(h = 270, r=8, $fn=30);
+    translate([11,12.5,46]) rotate([0,90,90]) cylinder(h = 270, r=9, $fn=30);
     translate([21,12.5,62]) rotate([0,90,90]) cube([20,20,30]);
   } 
-   translate([21,12.5,62-0.2]) rotate([0,90,90]) cube([20,20,0.2]);
-   translate([21,12.5,42]) rotate([0,90,90]) cube([0.2,20,20]);
-     
+  translate([21,12.5,62-0.2]) rotate([0,90,90]) cube([20,20,20]);
  }
 }
 
